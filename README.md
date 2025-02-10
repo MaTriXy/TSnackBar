@@ -1,6 +1,8 @@
 Top Snackbar
 ==========================
 
+Looking for a contributor here, because I don't have time anymore to take care of this.
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-TSnackBar-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2779)
 
 Show a Snackbar from the top. A big thanks to https://github.com/ejohansson, https://github.com/antoninovitale, https://github.com/hansonchris and everyone that took the time to make pull requests. 
@@ -15,8 +17,13 @@ Icons support:
 
 ### Installation (app's build.gradle):
 
-~~~~
-compile 'com.androidadvance:topsnackbar:1.1.1'
+
+~~~~ groovy
+maven {
+            url 'https://jitpack.io'
+        }
+
+implementation 'com.github.Redman1037:TSnackBar:V2.0.0'
 ~~~~
 
 ### How to use it (a tutorial starting from **simple usage** to **complex one**):
@@ -24,13 +31,13 @@ compile 'com.androidadvance:topsnackbar:1.1.1'
 
 ##### Example 1: Simple usage:
 
-~~~~
+~~~~ java
 TSnackbar.make(findViewById(android.R.id.content),"Hello from TSnackBar.",TSnackbar.LENGTH_LONG).show();
 ~~~~
 
 ##### Example 2: Custom colors:
 
-~~~~
+~~~~  java
 TSnackbar snackbar = TSnackbar.make(findViewById(android.R.id.content), "A Snackbar is a lightweight material design method for providing feedback to a user, while optionally providing an action to the user.", TSnackbar.LENGTH_LONG);
 snackbar.setActionTextColor(Color.WHITE);
 View snackbarView = snackbar.getView();
@@ -42,7 +49,7 @@ snackbar.show();
 
 ##### Example 3: Give 'em everything you got:
 
-~~~~   
+~~~~ java
 //vectordrawable
 TSnackbar snackbar = TSnackbar
         .make(relative_layout_main, "Snacking with VectorDrawable", TSnackbar.LENGTH_LONG);
